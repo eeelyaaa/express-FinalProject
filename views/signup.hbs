@@ -1,0 +1,32 @@
+<h1>Sign Up!</h1>
+<form action='/users/signup' method='POST'>
+    <div>
+        <label for='FirstName'>First Name: </label>
+        <input type='text' name='FirstName' />
+    </div>
+    <div>
+        <label for='LastName'>Last Name: </label>
+        <input type='text' name='LastName' />
+    </div>
+    <div>
+        <label for="Username">Username: </label>
+        <input type="text" name="Username" />
+    </div>
+    <div>
+        <label for="Password">Password: </label>
+        <input type="text" name="Password" />
+    </div>
+    <div>
+        <label for='Email'>Email: </label>
+        <input type='text' name='Email' />
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+<form action='/users/login' method='GET'>
+    <div>
+        <button type='submit'>Login</button>
+    </div>
+</form>

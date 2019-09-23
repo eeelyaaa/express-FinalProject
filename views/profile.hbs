@@ -1,0 +1,34 @@
+<h1>Hi there {{user.FirstName}} {{user.LastName}}</h1>
+<h3>Username: {{user.Username}} Password: {{user.Password}}</h3>
+<form action='/users/logout' method='GET'>
+    <button>Logout</button>
+</form>
+<hr>
+
+<h1>Your Posts</h1>
+{{#each foundPosts}}
+<ul>
+    <li>Title: {{PostTitle}} Body: {{PostBody}}</li>
+    <form action='/users/edit' method='GET'>
+        <button type='submit'>Edit</button>
+    </form>
+    <form action='/users/delete' method='POST'> 
+        <button type='submit'>Delete</button>
+    </form>
+</ul>
+{{/each}}
+<hr>
+<h3>Create new post</h3>
+<form action='/users/post' method='POST'>
+    <div>
+        <label for='PostTitle'>Title</label>
+        <input id='PostTitle' name='PostTitle' />
+    </div>
+    <div>
+        <label for='PostBody'>Body</label>
+        <input id='PostBody' name='PostBody' />
+    </div>
+    <div>
+        <button type='submit'>Submit</button>
+    </div>
+</form>
